@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>animate</title>
+	 <style>
+		*{
+			padding:0;
+			margin: 0;
+		}
+		.box{
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			background-color:red;
+		}
+	</style>
+	<script src="animate.js"></script>
+</head>	
+<body>
+	<div id='box'></div>
+	<script>
+		var box =document.getElementById('box');
+		box.oncilck = function(){
+			animate(box,{left:500,top:300,opacity:20},function(){
+				console.log(1);
+			})
+			/*var timer = setInterval(function(){
+			var now = parseInt(getStyle(box,'left'));
+				if(now == 500){
+					clearInterval(timer)
+				}else{
+					box,style,left = now + speed + "px";
+				}
+			},30);
+			var timer = setInterval(function(){
+			var now = parseInt(getStyle(box,'left'));
+			var speed = (333 - now)/6;
+			speed = speed>0?Math.ceil(speed):Math.floor(speed);
+			if(now == 333){
+				clearInterval(timer)
+			}else{
+				box,style,left = now + speed + "px";
+			}
+		},30)
+		}*/
+
+	</script>
+</body>
+</html>
